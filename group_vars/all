@@ -8,11 +8,14 @@ firewall_allowed_tcp_ports   :
   - "22"
   - "443"
   - "80"
+  - "3306"
+  - "4443"
   - "6443"
   - "8443"
-  - "2379-2380"
-  - "30000-32767"
-  - "10250-10258"
+  - "8080:8081"
+  - "2379:2380"
+  - "30000:32767"
+  - "10248:10260"
 
 k3s_registration_address     : instance-amd01.publicsubnet.mainvcn.oraclevcn.com
 k3s_server:

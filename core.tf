@@ -225,27 +225,5 @@ resource "oci_core_default_security_list" "Security-List-for-MainVCN" {
       min = "8443"
     }
   }
-  ingress_security_rules {
-    description = "dns"
-    protocol    = "6"
-    source      = "0.0.0.0/0"
-    source_type = "CIDR_BLOCK"
-    stateless   = "false"
-    tcp_options {
-      max = "53"
-      min = "53"
-    }
-  }
-  ingress_security_rules {
-    description = "dns"
-    protocol    = "17"
-    source      = "0.0.0.0/0"
-    source_type = "CIDR_BLOCK"
-    stateless   = "false"
-    udp_options {
-      max = "53"
-      min = "53"
-    }
-  }
   manage_default_resource_id = oci_core_vcn.MainVCN.default_security_list_id
 }
