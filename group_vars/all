@@ -1,0 +1,23 @@
+---
+ansible_user                 : ubuntu
+ansible_ssh_private_key_file : ~/.ssh/id_rsa
+k3s_release_version          : stable
+k3s_become                   : true
+
+firewall_allowed_tcp_ports   :
+  - "22"
+  - "443"
+  - "80"
+  - "3306"
+  - "4443"
+  - "6443"
+  - "8443"
+  - "8080:8081"
+  - "2379:2380"
+  - "30000:32767"
+  - "10248:10260"
+
+k3s_registration_address     : instance-amd01.publicsubnet.mainvcn.oraclevcn.com
+k3s_server:
+  disable:
+    - traefik
