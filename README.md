@@ -6,7 +6,7 @@ Required apps:
 - Ansible --> apt, yum, pip...
 - (Algo mas relacionado con ansible pero no me acuerdo. Mañana lo pongo)
 
-Requiered moves:
+Required moves:
 - Create Oracle Cloud (Free Tier) account
 - Create Terraform Cloud account: organization and workspace.
 - In provider.tf replace values for "organization" and "name" fields by yours organization and workspace names have created.
